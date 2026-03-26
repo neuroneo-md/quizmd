@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/neuroneo-md/quizmd/schema/quizmd.schema.json",
+  "title": "QuizMD Frontmatter",
+  "description": "JSON Schema for the YAML frontmatter of a .quiz.md file (Level 1).",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Quiz title. Inferred from the first # H1 if omitted."
+    },
+    "description": {
+      "type": "string",
+      "description": "Short description of the quiz."
+    },
+    "lang": {
+      "type": "string",
+      "description": "BCP 47 language tag (e.g. en, fr, es).",
+      "pattern": "^[a-z]{2}(-[A-Z]{2})?$"
+    },
+    "domain": {
+      "type": "string",
+      "enum": ["recreational", "academic", "corporate", "certification"],
+      "description": "Domain / audience category."
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Free-form tags for discovery."
+    },
+    "reveal": {
+      "type": "string",
+      "enum": ["all", "sequential"],
+      "default": "all",
+      "description": "all — all questions visible at once. sequential — one at a time."
+    },
+    "feedback_mode": {
+      "type": "string",
+      "enum": ["immediate", "deferred"],
+      "default": "immediate",
+      "description": "immediate — feedback shown after each answer. deferred — feedback shown at the end."
+    },
+    "passing_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Minimum ratio to pass (0.0–1.0). E.g. 0.7 = 70%."
+    },
+    "time_limit": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Global time limit for the entire quiz, in seconds."
+    },
+    "shuffle_questions": {
+      "type": "boolean",
+      "default": false,
+      "description": "Randomise question order on each attempt."
+    },
+    "shuffle_answers": {
+      "type": "boolean",
+      "default": false,
+      "description": "Randomise answer choice order for MCQ and multi-select questions."
+    },
+    "author": {
+      "type": "string",
+      "description": "Author name or identifier."
+    }
+  },
+  "additionalProperties": false
+}
