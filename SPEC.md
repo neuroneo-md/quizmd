@@ -148,7 +148,7 @@ A True/False question is an MCQ with exactly two choices labeled `True` and `Fal
 
 A match question associates items from two columns. Declared with `type: match` in the per-question ` ```quiz ` block. Syntax uses a Markdown table:
 
-```markdown
+````markdown
 ## Q6 · Match each composer with their nationality.
 
 ```quiz
@@ -162,13 +162,13 @@ points: 4
 | Vivaldi | Italian |
 | Handel | German |
 | Rameau | French |
-```
+````
 
 ### Order
 
 An order question asks the learner to sort items into the correct sequence. Declared with `type: order`. The correct order is the order in which items appear in the list:
 
-```markdown
+````markdown
 ## Q7 · Place these Baroque composers in chronological order of birth (earliest first).
 
 ```quiz
@@ -181,7 +181,7 @@ points: 3
 3. Jean-Baptiste Lully (1632)
 4. Henry Purcell (1659)
 5. Antonio Vivaldi (1678)
-```
+````
 
 ---
 
@@ -379,7 +379,7 @@ scoring:
 
 A ` ```quiz ` block placed **immediately after the question heading** overrides global parameters for that specific question. The content is YAML using the same keys as the rest of the format.
 
-```markdown
+````markdown
 ## Q5 · What is the speed of light?
 
 ```quiz
@@ -395,7 +395,7 @@ type: mcq
 - [ ] 150,000 km/s
 - [x] 299,792 km/s
 - [ ] 1,000,000 km/s
-```
+````
 
 ### Per-question block field reference
 
@@ -539,7 +539,7 @@ Strict mode is recommended for CI pipelines and production publishing. Lenient m
 
 ## Complete example — Level 2
 
-```markdown
+````markdown
 ---
 title: Physics Exam — Mechanics
 lang: en
@@ -628,7 +628,7 @@ difficulty: easy
 | Joule | Energy |
 | Watt | Power |
 | Pascal | Pressure |
-```
+````
 
 ---
 
@@ -649,12 +649,3 @@ QuizMD provides a reference MCP server that exposes the format to compatible AI 
 
 The `parse_quiz` output includes, for each question, `source_file` and `source_title` when the question originates from an imported sub-quiz. The `imports` field lists all sub-quiz paths declared in the file.
 
----
-
-## References
-
-- [GIFT (Moodle)](https://docs.moodle.org/en/GIFT_format) — text DSL for quizzes
-- [Aiken (Moodle)](https://docs.moodle.org/en/Aiken_format) — minimalist MCQ format
-- [text2qti](https://pypi.org/project/text2qti/) — Markdown to QTI
-- [QTI v3](https://www.imsglobal.org/spec/qti/v3p0/oview) — academic XML standard
-- [neuroneo.md](https://www.neuroneo.md) — reference implementation and community platform
