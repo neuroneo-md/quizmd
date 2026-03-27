@@ -345,6 +345,7 @@ scoring:
 | `time_limit` | int | No | — | Total time limit in seconds |
 | `scoring.correct` | int | No | 1 | Points awarded per correct answer |
 | `scoring.incorrect` | int | No | 0 | Points deducted per incorrect answer |
+| `spec_version` | string | No | — | QuizMD spec version this file targets (e.g. `"0.2"`) |
 
 ### Level 1 example
 
