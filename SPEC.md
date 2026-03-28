@@ -464,12 +464,34 @@ QuizMD supports **ABC notation** for rendering sheet music inline in question bo
 
 ### Syntax
 
-Use a fenced code block with the language identifier `abc`:
+Use a fenced code block with the language identifier `abc`, optionally followed by space-separated flags:
+
+```
+```abc [play] [cursor] [colors]
+```
+
+| Flag | Description |
+|------|-------------|
+| *(none)* | Static SVG score only |
+| `play` | Adds audio controls (play, restart, progress bar) |
+| `cursor` | Highlights the current note during playback (requires `play`) |
+| `colors` | Colors each note by pitch class on the chromatic wheel (requires `play`) |
+
+Flags are combinable in any order: ` ```abc play cursor colors `
 
 ````markdown
 ```abc
 X:1
-T:Scale of C major
+T:Example — static
+M:4/4
+L:1/4
+K:C
+CDEF|GABC|
+```
+
+```abc play cursor
+X:1
+T:Example — interactive
 M:4/4
 L:1/4
 K:C
@@ -481,6 +503,7 @@ CDEF|GABC|
 
 - Compatible renderers replace the `abc` block with an inline SVG score.
 - Non-compatible renderers (e.g. GitHub) display the raw ABC text as a code block — the format degrades gracefully.
+- The `play` flag uses the Web Audio API via [abcjs synth](https://www.abcjs.net/api-synth.html); it is loaded lazily only when ABC blocks are present in the question.
 - ABC notation may appear in question bodies. It is **not** supported inside answer choices, feedback, or hints.
 
 ### Example
@@ -488,9 +511,9 @@ CDEF|GABC|
 ```markdown
 ## Q1 · Which of these is a C major scale?
 
-Listen to the following musical example:
+Listen to the following musical example and identify the scale:
 
-\`\`\`abc
+\`\`\`abc play cursor
 X:1
 T:Example
 M:4/4
@@ -554,7 +577,8 @@ To disable: set `partial_scoring: false` in the frontmatter. This reverts to bin
 | Block math | `$$formula$$` | 0 |
 | Frontmatter | `---` YAML `---` | 1 |
 | Per-question config | ` ```quiz ` YAML ` ``` ` | 2 |
-| ABC music notation | ` ```abc ` ABC text ` ``` ` | 0 |
+| ABC (static) | ` ```abc ` ABC text ` ``` ` | 0 |
+| ABC (interactive) | ` ```abc play cursor colors ` ABC text ` ``` ` | 0 |
 
 ---
 
