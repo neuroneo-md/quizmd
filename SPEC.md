@@ -458,6 +458,53 @@ What is its kinetic energy $E_k$?
 
 ---
 
+## ABC music notation
+
+QuizMD supports **ABC notation** for rendering sheet music inline in question bodies. Compatible renderers (e.g. neuroneo.md) use [abcjs](https://www.abcjs.net/) to produce SVG output directly in the browser — no server required.
+
+### Syntax
+
+Use a fenced code block with the language identifier `abc`:
+
+````markdown
+```abc
+X:1
+T:Scale of C major
+M:4/4
+L:1/4
+K:C
+CDEF|GABC|
+```
+````
+
+### Rendering
+
+- Compatible renderers replace the `abc` block with an inline SVG score.
+- Non-compatible renderers (e.g. GitHub) display the raw ABC text as a code block — the format degrades gracefully.
+- ABC notation may appear in question bodies. It is **not** supported inside answer choices, feedback, or hints.
+
+### Example
+
+```markdown
+## Q1 · Which of these is a C major scale?
+
+Listen to the following musical example:
+
+\`\`\`abc
+X:1
+T:Example
+M:4/4
+L:1/4
+K:C
+CDEF|GABC|
+\`\`\`
+
+- [x] C D E F G A B C
+- [ ] C D Eb F G Ab Bb C
+```
+
+---
+
 ## Partial scoring
 
 When `partial_scoring: true` (default), **match** and **order** questions award a proportional score rather than all-or-nothing.
@@ -507,6 +554,7 @@ To disable: set `partial_scoring: false` in the frontmatter. This reverts to bin
 | Block math | `$$formula$$` | 0 |
 | Frontmatter | `---` YAML `---` | 1 |
 | Per-question config | ` ```quiz ` YAML ` ``` ` | 2 |
+| ABC music notation | ` ```abc ` ABC text ` ``` ` | 0 |
 
 ---
 
