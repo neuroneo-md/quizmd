@@ -513,14 +513,14 @@ CDEF|GABC|
 
 Listen to the following musical example and identify the scale:
 
-\`\`\`abc play cursor
+```abc play cursor
 X:1
 T:Example
 M:4/4
 L:1/4
 K:C
 CDEF|GABC|
-\`\`\`
+```
 
 - [x] C D E F G A B C
 - [ ] C D Eb F G Ab Bb C
