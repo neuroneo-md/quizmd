@@ -5,7 +5,7 @@ author: quizmd-team
 version: 0.1.0
 lang: fr
 tags: [géographie, france, climat, cm1, primaire]
-domain: academic
+kind: academic
 shuffle_answers: true
 shuffle_questions: false
 passing_score: 0.6

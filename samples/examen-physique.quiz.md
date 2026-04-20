@@ -2,7 +2,7 @@
 title: Examen de physique — Terminale
 description: Un quiz en mode examen — questions une par une, résultats à la fin.
 lang: fr
-domain: academic
+kind: academic
 tags: [physique, terminale, examen]
 passing_score: 0.6
 reveal: sequential

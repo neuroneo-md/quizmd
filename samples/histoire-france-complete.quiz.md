@@ -3,7 +3,7 @@ title: Histoire de France — Parcours complet
 description: Un quiz transversal assemblé depuis trois modules indépendants (Clovis & les Francs, Révolution française, Napoléon). Démontre la fonctionnalité d'import de sous-quiz.
 lang: fr
 tags: [histoire, france, compilation, import]
-domain: academic
+kind: academic
 passing_score: 0.6
 scoring:
   correct: 1

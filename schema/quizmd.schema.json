@@ -18,10 +18,10 @@
       "description": "BCP 47 language tag (e.g. en, fr, es).",
       "pattern": "^[a-z]{2}(-[A-Z]{2})?$"
     },
-    "domain": {
+    "kind": {
       "type": "string",
       "enum": ["recreational", "academic", "corporate", "certification"],
-      "description": "Domain / audience category."
+      "description": "Content kind / audience category."
     },
     "tags": {
       "type": "array",

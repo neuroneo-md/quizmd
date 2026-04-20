@@ -250,7 +250,7 @@ The directive must appear alone on its line. The path is **relative** to the fil
 ---
 title: History of France — Complete course
 lang: en
-domain: academic
+kind: academic
 passing_score: 0.6
 ---
 
@@ -309,8 +309,8 @@ lang: BCP-47                # e.g. "fr", "en", "en-US"
 tags: [string]
 license: SPDX               # e.g. "CC-BY-4.0", "MIT"
 
-# Domain
-domain: recreational | academic | corporate | certification
+# Kind (content category)
+kind: recreational | academic | corporate | certification
 
 # Behavior
 reveal: all | sequential            # default: all
@@ -336,7 +336,7 @@ scoring:
 | `author` | string or object | No | — | Author name, or `{name, email, url}` |
 | `lang` | BCP-47 | No | — | Language code (`en`, `fr`, `en-US`) |
 | `tags` | string[] | No | `[]` | Thematic tags |
-| `domain` | enum | No | — | `recreational`, `academic`, `corporate`, `certification` |
+| `kind` | enum | No | — | `recreational`, `academic`, `corporate`, `certification` |
 | `reveal` | enum | No | `all` | `all` or `sequential` |
 | `feedback_mode` | enum | No | `immediate` | `immediate` or `deferred` |
 | `shuffle_questions` | bool | No | `false` | Randomize question order |
@@ -355,7 +355,7 @@ title: Baroque Music
 description: Composers, works and characteristics of the Baroque era (c. 1600–1750)
 lang: en
 tags: [music, baroque, history]
-domain: recreational
+kind: recreational
 shuffle_answers: true
 passing_score: 0.6
 reveal: sequential
@@ -616,7 +616,7 @@ Strict mode is recommended for CI pipelines and production publishing. Lenient m
 ---
 title: Physics Exam — Mechanics
 lang: en
-domain: academic
+kind: academic
 tags: [physics, mechanics, exam]
 passing_score: 0.6
 reveal: sequential

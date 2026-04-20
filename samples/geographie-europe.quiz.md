@@ -6,7 +6,7 @@ version: 0.1.0
 lang: fr
 tags: [géographie, europe, capitales, fleuves, frontières]
 license: CC-BY-4.0
-domain: recreational
+kind: recreational
 shuffle_answers: true
 shuffle_questions: false
 passing_score: 0.6

@@ -1,7 +1,7 @@
 ---
 title: "Quiz — Introduction aux LLMs"
 lang: fr
-domain: ia
+kind: ia
 level: beginner
 tags: [llm, ia, transformer]
 ---

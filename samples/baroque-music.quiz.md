@@ -6,7 +6,7 @@ version: 0.1.0
 lang: en
 tags: [music, baroque, classical, history, composers]
 license: CC-BY-4.0
-domain: recreational
+kind: recreational
 shuffle_answers: true
 shuffle_questions: false
 passing_score: 0.6

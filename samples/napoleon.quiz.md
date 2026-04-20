@@ -6,7 +6,7 @@ version: 0.1.0
 lang: fr
 tags: [histoire, france, napoléon, empire, 19e-siècle]
 license: CC-BY-4.0
-domain: academic
+kind: academic
 shuffle_answers: true
 passing_score: 0.6
 scoring:

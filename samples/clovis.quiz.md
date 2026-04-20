@@ -6,7 +6,7 @@ version: 0.1.0
 lang: fr
 tags: [histoire, france, clovis, mérovingiens, moyen-âge]
 license: CC-BY-4.0
-domain: academic
+kind: academic
 shuffle_answers: true
 shuffle_questions: false
 passing_score: 0.6

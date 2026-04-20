@@ -3,7 +3,7 @@ title: Mécanique classique — Prépa MPSI
 description: Quiz de mécanique du point, travail et énergie, oscillateurs. Chaque question présente un problème complet avec contexte, données et figure schématique. Réponses argumentées avec justification physique.
 author: QuizMD
 lang: fr
-domain: academic
+kind: academic
 tags: [physique, mécanique, prépa, mpsi, énergie, oscillateur]
 passing_score: 0.5
 reveal: sequential

@@ -3,7 +3,7 @@ title: Ludwig van Beethoven
 description: Testez vos connaissances sur la vie et l'œuvre du génie de Bonn.
 author: QuizMD
 lang: fr
-domain: recreational
+kind: recreational
 tags: [musique, classique, compositeurs]
 passing_score: 0.6
 scoring:

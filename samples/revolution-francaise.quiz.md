@@ -6,7 +6,7 @@ version: 0.1.0
 lang: fr
 tags: [histoire, france, révolution, 18e-siècle, république]
 license: CC-BY-4.0
-domain: academic
+kind: academic
 shuffle_answers: true
 shuffle_questions: false
 passing_score: 0.65

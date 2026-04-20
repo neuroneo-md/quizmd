@@ -3,7 +3,7 @@ title: Philosophie — Éthique et responsabilité
 description: Quiz de terminale sur les grandes théories éthiques appliquées à des situations concrètes. Questions à mise en contexte, réponses argumentées.
 author: QuizMD
 lang: fr
-domain: academic
+kind: academic
 tags: [philosophie, éthique, terminale, kant, utilitarisme, liberté]
 passing_score: 0.6
 feedback_mode: immediate
