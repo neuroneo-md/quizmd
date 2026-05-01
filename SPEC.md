@@ -239,8 +239,8 @@ The directive must appear alone on its line. The path is **relative** to the fil
 - Questions from the sub-quiz are **inserted at the position of the directive** in the question stream.
 - Questions are **renumbered sequentially** (Q1, Q2, … across the full assembled quiz).
 - The **frontmatter of the sub-quiz is ignored** — only its questions are imported. Global metadata (title, language, scoring) come from the parent file.
-- Imports are **recursive**: a sub-quiz may itself contain `!import` directives.
-- **Circular import protection** is guaranteed: a file already being processed is silently skipped.
+- **Nested imports are not supported.** `!import` directives are only honored when they appear in the **entry file** of a quiz (or in the entry `.learn.md` of a course that embeds this quiz). An `!import` line inside a file that is itself imported is **inert** — renderers and authoring tools must ignore it. Authors must lift every `!import` to the entry file.
+- Circular imports cannot occur because nesting is forbidden.
 - Missing files are **ignored without error**, allowing partial assemblies.
 - Multiple `!import` directives may coexist in a single file, in any order, interleaved with local questions.
 
