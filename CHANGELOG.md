@@ -7,6 +7,30 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [0.3.0] — 2026-05-10
+
+### Context
+QuizMD becomes part of the broader **LearnSpec** suite. Many additions align with universal LearnSpec conventions defined in the [Architecture Charter](https://github.com/learnspec/.github/blob/main/profile/README.md).
+
+### Added
+- `!ref` directive — declares a MediaMD or GlossaryMD context without inline rendering
+- `!import` now supports `.diagram.md` files (DiagramMD reusable diagram bundles)
+- `media:slug` image syntax with mandatory fallback URL — resolves to MediaMD entries
+- Explicit support for DiagramMD Level 0 blocks in question bodies
+- Frontmatter fields: `created`, `updated`, `license` (SPDX) — universal LearnSpec fields
+- Principle: "LearnSpec-interoperable"
+
+### Changed
+- `lang` frontmatter field promoted from optional to **required** (warning in lenient mode, error in strict)
+- `title` frontmatter field demoted from required to **optional** — inferred from the first `# H1` if absent
+- ABC notation section removed — delegated to the [DiagramMD spec](https://github.com/learnspec/diagrammd)
+
+### Breaking
+- `lang` is now required (lenient: warning; strict: error)
+- `title` is no longer required (parsers may need to derive it from H1)
+
+---
+
 ## [0.2.0] — 2026-03-26
 
 ### Added
